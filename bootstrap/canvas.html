@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+      canvas{
+          background: gray;
+      }
+  </style>
+</head>
+<body>
+	<canvas id="MiCanvas" width="800" height="800"></canvas>
+    
+    <script>
+    	var canvas = document.getElementById("MiCanvas");
+        
+        var ctx = canvas.getContext("2d");
+        
+        ctx.fillStyle = "blue";
+        //           x, y, width, height
+        ctx.fillRect(20, 20, 100, 100);
+        
+        ctx.strokeStyle = "red";
+        ctx.strokeRect(140, 20, 100, 100);
+        
+        ctx.strokeStyle = "yellow";
+        //       x,y,radio,starAngle,endAngle,anticlockwise
+        ctx.arc(70, 190, 50, 0, Math.PI*2, true);
+        ctx.stroke(); 
+    </script>
+</body>
+</html>
